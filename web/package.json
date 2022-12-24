@@ -1,0 +1,14 @@
+{
+"main":"index.html",
+"name":"Snake Math",
+"description":"Projeto escolar, jogo da cobrinha com matemática.",
+"version":"0.1",
+"package":"json",
+"single-instance":true,
+"window":{
+	"toolbar":false
+},
+"dom_storage_quota":50,
+"user-agent":"Mozilla/5.0(%osinfo)AppleWebKit/%webkit_ver(KHTML, like Gecko,Chrome,Safari)NWjs/%nwver",
+"chromium-args":"--disable-extensions--disable-plugins--disable-internal-flash--disable-popup-blocking--enable-gamepad--enable-html5-camera--allow-file-access-from-files--disable-software-rasterizer--ignore-gpu-blocklist"
+}

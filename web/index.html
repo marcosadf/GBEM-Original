@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html scrolling="no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable = no, initial-scale = 1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Snake</title>
+	<style> 
+		html,body{ 
+			overflow: hidden;
+		} 
+	</style>
+	<script>
+		var audio = new Audio("audio/BoxCat Games - 19 - Mission.mp3");
+		audio.loop = true;
+		function limitarInput(obj) {
+		obj.value = obj.value.substring(0,10); //Aqui eu pego o valor e só deixo o os 10 primeiros caracteres de valor no input
+		}
+	</script>
+	<script type="text/javascript" src="JS/upgradeGame.js" async ></script>
+	<!-- <script type="text/javascript" src="JS/ranking.js" async ></script> -->
+</head>
+<body id="body" >
+
+	<div id="baseGame" scrolling="no">
+		<table id="painelGame" border="0" >
+			<tr id="trMenu">
+				<td id="tdMenu1"><button id="botao1" onclick="reset();"> Novo Jogo </button></td>
+				<td id="tdMenu2"><button id="botao2" onclick="inserirUsuario();"> Novo Usuario </button></td>
+				<td id="tdMenu3"><button id="botao3" onclick="ajuda();"> Ajuda </button></td>
+				<td id="tdMenu4" id="espacoVazio"><button id="botao4" onclick="mudo()" > Som </button></td>
+				<td id="tdMenu5"><button id="botao5" onclick="TelaCheia();"> Tela Cheia </button></td>
+				<td id="tituloRank"> RANKING</td>
+			</tr>
+			<tr>
+				<td colspan="5" id="telaGame" >
+					<canvas id="canvas"></canvas>
+				</td>
+				<td id="painelRank" style="">
+					<p style="background-color: rgb(70,70,70); border-bottom: 1px solid; text-align: center; font-size: 20px;
+					font-family: Impact; margin-top: -7%; margin-bottom: 0px;">Sua Posição</p>
+					
+					<iframe id="posicaoAtual" src="rankingAtual.html" frameborder="1" style="width: 100%; border-bottom: 1px solid"></iframe>
+					
+					<p style="background-color: rgb(70,70,70); border-bottom: 1px solid; text-align: center; font-size: 20px;
+					font-family: Impact; margin-top: -1%; margin-bottom: 0px;">Top 10</p>
+					
+					<iframe id="posicaoTop" src="rankingTop.html" frameborder="1" style="width: 100%"></iframe>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
